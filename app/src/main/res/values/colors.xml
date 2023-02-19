@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    base option
+    <color name="desert_dark_brown">#FF281B00</color>
+    <color name="desert_medium_brown">#FF733A00</color>
+    <color name="desert_brown">#FF8A5B00</color>
+    <color name="desert_light_brown">#FFD28900</color>
+    <color name="desert_yellow">#FAD44A</color>
+    <color name="desert_pale">#FFF7EADA</color>
+
+    cyber pink option
+    <color name="cyber_black_lila">#2E003F</color>
+    <color name="cyber_dark_lila">#FF49006A</color>
+    <color name="cyber_medium_lila">#FF7A0177</color>
+    <color name="cyber_rose">#FF197C</color>
+    <color name="cyber_pink">#FFDD3497</color>
+    <color name="cyber_light_pink">#FFA7E6</color>
+
+    deep blue option
+    <color name="db_dark_ocean">#FF1A256A</color>
+    <color name="db_dark_blue">#FF2839B6</color>
+    <color name="db_medium_blue">#FF2C7FB8</color>
+    <color name="db_blue">#FF41B6C4</color>
+    <color name="db_light_blue">#FFA1DACB</color>
+    <color name="db_blue_white">#FFCCFBFE</color>
+
+
+</resources>

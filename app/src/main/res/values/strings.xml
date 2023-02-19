@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DesertScape</string>
+    <string-array name="levels_to_choose">
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Level 4</item>
+    </string-array>
+    <string-array name="themes_to_choose">
+        <item>Desert</item>
+        <item>CyberPink!</item>
+        <item>Ocean Deep</item>
+    </string-array>
+</resources>
