@@ -15,8 +15,8 @@
             android:id="@+id/playScreenAndButtonsLL"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="6">
+            android:weightSum="6"
+            android:orientation="horizontal" >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -89,7 +89,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/desert_button"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                        android:text="run"
+                        android:text="walk"
                         android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                     <android.widget.Button
@@ -100,7 +100,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/desert_button"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                        android:text="walk"
+                        android:text="run"
                         android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                     <android.widget.Button
@@ -120,10 +120,10 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/desert_button"
+                        android:background="@drawable/desert_button_inactive"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
                         android:text="hide"
-                        android:textColor="@color/desert_pale"
+                        android:textColor="@color/desert_brown"
                         android:textSize="30sp" />
                 </LinearLayout>
                 <ScrollView
@@ -136,12 +136,12 @@
                     android:scrollbarAlwaysDrawVerticalTrack="true"
                     android:scrollbarStyle="insideOverlay">
                     <TextView
-                        android:id="@+id/storyTellingTtV"
+                        android:id="@+id/storyTellingTV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
                         android:padding="15dp"
-                        android:text="Here goes the storytelling text..."
+                        android:text="@string/text_in_log"
                         android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                 </ScrollView>
@@ -204,22 +204,26 @@
             android:id="@+id/howToPlayAndButtonsLL"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/desert_background"
             android:weightSum="6"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/desert_background" >
             <LinearLayout
                 android:id="@+id/howToPlayLL"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5">
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:weightSum="1">
                 <TextView
                     android:id="@+id/howToPlayTV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="40sp"
+                    android:textSize="25sp"
                     android:textColor="@color/desert_pale"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                    android:text="Here goes the how to play instructions."
+                    android:text="You were in your holidays but shit happens and now you are being hunted by very nasty people.
+                    \n\nPush play"
+                    android:layout_weight="1"
                     android:layout_margin="15dp"/>
             </LinearLayout>
         <LinearLayout
@@ -228,11 +232,12 @@
             android:layout_height="match_parent"
             android:weightSum="4"
             android:layout_weight="1"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:gravity="center">
+            android:layout_gravity="center">
             <android.widget.Button
                 android:id="@+id/firstHowToOptionButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
@@ -241,17 +246,12 @@
                 android:textColor="@color/desert_pale"
                 android:textSize="30sp"
                 android:text="X"/>
-            <TextView
-                android:id="@+id/howToPageNUmberTV"
+            <android.widget.Button
+                android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                android:textColor="@color/desert_pale"
-                android:textSize="30sp"
-                android:gravity="center"
-                android:text="Page 4"/>
+                android:layout_margin="10dp"
+                android:layout_weight="1" />
             <android.widget.Button
                 android:id="@+id/secondHowToOptionButton"
                 android:layout_width="wrap_content"
@@ -262,12 +262,12 @@
                 android:fontFamily="@font/gomarice_coffee_jelly_umai"
                 android:textColor="@color/desert_pale"
                 android:textSize="25sp"
-                android:text="Next page"/>
+                android:text="Next \npage"/>
             <android.widget.Button
                 android:id="@+id/thirdHowToOptionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginVertical="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/desert_button"
                 android:fontFamily="@font/gomarice_coffee_jelly_umai"
@@ -640,11 +640,7 @@
                     android:textSize="30sp"
                     android:textColor="@color/desert_pale"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                    android:text="
-- Has avanzado 90 km. Llevas recorridos 190 de 1000 km\n
-- A tu caballo le quedan 14 unidades de energia\n
-- Tus perseguidores han recorrido 84 km. \n
-- Se encuentran a  81 km de distancia de ti."
+                    android:text=" - Here you can read everything happened till now"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="5"/>
             </LinearLayout>
