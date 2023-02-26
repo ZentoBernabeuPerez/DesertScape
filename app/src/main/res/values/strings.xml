@@ -11,5 +11,5 @@
         <item>CyberPink!</item>
         <item>Ocean Deep</item>
     </string-array>
-    <string name="text_in_log">Please choose an option</string>
+    <string name="text_in_log">¿What´s your first move?</string>
 </resources>

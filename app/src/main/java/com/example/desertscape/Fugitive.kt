@@ -16,7 +16,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
     val saved_horse = this.horse_alive
     val saved_total_distance = this.total_distance
     var textToShow = ""
-    var textToToast = ""
+    var fugitiveProgress = 0
 
     //this function used the saved values to restore object to its initial state
     fun newGameRestaurator() {
@@ -25,6 +25,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
         this.horse_energy = saved_horse_energy
         this.horse_alive = saved_horse
         this.total_distance = saved_total_distance
+        this.textToShow = ""
     }
    //this returns a boolean depending on if we have reach the end
    fun saved(): Boolean {return this.total_distance >= LASTCITY}
@@ -36,7 +37,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
     fun isAlive():Boolean { return this.energy >= 0 }
 
     //Used to make water to 0 when you have drinked more water than you have
-    fun noMoreWater() { this.water = 0; textToToast = "No water left, try other thing" }
+    fun noMoreWater() { this.water = 0 }
 
     //slow pace with horse function
     fun horseTrot(){
@@ -47,6 +48,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
         this.total_distance =  this.total_distance + runnedDistance
         if(this.horse_energy <= 0) { this.horse_energy = 0 }
         if(this.total_distance > LASTCITY) { this.total_distance = LASTCITY }
+        fugitiveProgress = this.total_distance
         textToShow = "Your horse have run $runnedDistance km, your horse have $horse_energy of energy units left \nYou are ${LASTCITY - this.total_distance} km long from saving yourself"
     }
 
@@ -59,6 +61,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
         this.total_distance =  this.total_distance + runnedDistance
         if(this.horse_energy <= 0) { this.horse_energy = 0 }
         if(this.total_distance > LASTCITY) { this.total_distance = LASTCITY }
+        fugitiveProgress = this.total_distance
         textToShow = "Your horse have run $runnedDistance km, your horse have ${this.horse_energy} of energy units left\nYou are ${LASTCITY - this.total_distance} km long from saving yourself"
     }
 
@@ -73,7 +76,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
                 this.water = this.water - waterDrinked
             }
             this.horse_energy = (this.horse_energy + waterDrinked * WATERHORSEFACTOR).toInt()
-            textToShow = "Your horse have drinked $waterDrinked liters of water. \nYour horse have now ${this.horse_energy} of energy units.\nYou have ${this.water} liters of water left"
+            textToShow = "Your horse have drinked $waterDrinked liters of water. \nYour horse have now ${this.horse_energy} of energy units. You have ${this.water} liters of water left"
         } else {
             this.noMoreWater()
         }
@@ -92,6 +95,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
             if (this.total_distance > LASTCITY) {
                 this.total_distance = LASTCITY
             }
+            fugitiveProgress = this.total_distance
             textToShow = "You have run $runnedDistance km, you have $energy of energy units left\nYou are ${LASTCITY - this.total_distance} km long from saving yourself"
         }
 
@@ -108,6 +112,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
             if (this.total_distance > LASTCITY) {
                 this.total_distance = LASTCITY
             }
+            fugitiveProgress = this.total_distance
             textToShow = "You have run $runnedDistance km, you have $energy of energy units left\nYou are ${LASTCITY - this.total_distance} km long from saving yourself"
         }
 
@@ -122,7 +127,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
                     this.water = this.water - waterDrinked
                 }
                 this.energy = this.energy + waterDrinked * WATERHUMANFACTOR
-                textToShow = "You have drinked $waterDrinked liters of water. \nYou have now ${this.energy} of energy units.\nYou have ${this.water} liters of water left"
+                textToShow = "You have drinked $waterDrinked liters of water. You have now ${this.energy} of energy units.\nYou have ${this.water} liters of water left"
             } else {
                 this.noMoreWater()
             }
@@ -134,6 +139,7 @@ class Fugitive (var water: Int, var energy: Int, var horse: Horse, var total_dis
             val hidePotluck = potluck.random()
             if (hidePotluck == RIGHTFACTOR) {
                 this.total_distance = this.total_distance + HIDEPLUSDISTANCE
+                fugitiveProgress = this.total_distance
                 textToShow = "You have hidden succesfully, you are now: ${this.total_distance} "
             }
             else {

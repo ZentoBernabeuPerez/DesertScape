@@ -43,7 +43,7 @@
                     android:background="@drawable/desert_seekbar"
                     android:max="1000"
                     android:thumb="@drawable/ic_swords"
-                    android:progress="150" />
+                    android:progress="100" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/desert_seekbar"
                     android:max="1000"
-                    android:progress="150"
+                    android:progress="0"
                     android:thumb="@drawable/ic_swords" />
                 <TextView
                     android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/desert_button"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                        android:text="walk"
+                        android:text="trot"
                         android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                     <android.widget.Button
@@ -100,7 +100,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/desert_button"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                        android:text="run"
+                        android:text="gallope"
                         android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                     <android.widget.Button
@@ -122,8 +122,8 @@
                         android:layout_weight="1"
                         android:background="@drawable/desert_button_inactive"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                        android:text="hide"
-                        android:textColor="@color/desert_brown"
+                        android:text=""
+                        android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                 </LinearLayout>
                 <ScrollView
@@ -141,9 +141,9 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/gomarice_coffee_jelly_umai"
                         android:padding="15dp"
-                        android:text="@string/text_in_log"
+                        android:text="Chose your first action by clicking above buttons"
                         android:textColor="@color/desert_pale"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </ScrollView>
                      </LinearLayout>
             <LinearLayout
@@ -200,7 +200,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/howToPlayAndButtonsLL"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -218,7 +218,7 @@
                     android:id="@+id/howToPlayTV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="25sp"
+                    android:textSize="30sp"
                     android:textColor="@color/desert_pale"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
                     android:text="You were in your holidays but shit happens and now you are being hunted by very nasty people.
@@ -620,7 +620,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="4"
+                android:layout_weight="5"
                 android:background="@drawable/desert_scrollbar"
                 android:weightSum="6"
                 android:orientation="vertical">
@@ -635,9 +635,9 @@
                     android:layout_weight="1"/>
                 <TextView
                     android:id="@+id/logPlusTV"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:textColor="@color/desert_pale"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
                     android:text=" - Here you can read everything happened till now"
@@ -665,7 +665,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
                     android:textColor="@color/desert_pale"
@@ -675,7 +675,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
                     android:textColor="@color/desert_pale"
@@ -685,7 +685,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/gomarice_coffee_jelly_umai"
                     android:textColor="@color/desert_pale"
