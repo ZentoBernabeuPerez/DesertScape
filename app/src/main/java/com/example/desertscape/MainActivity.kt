@@ -78,5 +78,4 @@ class MainActivity : AppCompatActivity() {
         var logPlus = findViewById<LinearLayout>(R.id.logPlusLL)
         logPlus.visibility = View.INVISIBLE
     }
-
 }
