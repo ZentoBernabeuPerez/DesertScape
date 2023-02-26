@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var horseObject = Horse(20, 15, 20, true)
+        var fugitiveObject = Fugitive(16, 20, horseObject, 100)
+        var chaserObject = Chasers(25, 70, 70, 140, 0)
+        testingClasses(fugitiveObject, chaserObject, horseObject)
         val levels = resources.getStringArray(R.array.levels_to_choose)
         val arrayAdapterLevels = ArrayAdapter(this, R.layout.dropdown_menu, levels)
         val levelsAutoCompleteTV = findViewById<AutoCompleteTextView>(R.id.levelAutocompleteTV)
@@ -74,4 +78,5 @@ class MainActivity : AppCompatActivity() {
         var logPlus = findViewById<LinearLayout>(R.id.logPlusLL)
         logPlus.visibility = View.INVISIBLE
     }
+
 }
