@@ -126,26 +126,31 @@
                         android:textColor="@color/desert_pale"
                         android:textSize="30sp" />
                 </LinearLayout>
-                <ScrollView
-                    android:id="@+id/storytellingSV"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="6"
-                    android:layout_marginHorizontal="10dp"
-                    android:background="@drawable/desert_scrollbar"
-                    android:scrollbarAlwaysDrawVerticalTrack="true"
-                    android:scrollbarStyle="insideOverlay">
-                    <TextView
-                        android:id="@+id/storyTellingTV"
+                    android:layout_height="160dp"
+                    android:orientation="vertical"
+                    android:layout_weight="6">
+                    <ScrollView
+                        android:id="@+id/storytellingSV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/gomarice_coffee_jelly_umai"
-                        android:padding="15dp"
-                        android:text="Chose your first action by clicking above buttons"
-                        android:textColor="@color/desert_pale"
-                        android:textSize="20sp" />
-                </ScrollView>
-                     </LinearLayout>
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/desert_scrollbar"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:scrollbarStyle="insideOverlay">
+                        <TextView
+                            android:id="@+id/storyTellingTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="500dp"
+                            android:fontFamily="@font/gomarice_coffee_jelly_umai"
+                            android:padding="15dp"
+                            android:text="Chose your first action by clicking above buttons\n\n\n\n\n\n"
+                            android:textColor="@color/desert_pale"
+                            android:textSize="25sp"/>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
